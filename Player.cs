@@ -12,11 +12,13 @@ public partial class Player : CharacterBody3D
 	private Mesh _mesh;
 	private bool _materialized = true;
 
+	/*
 	public override void _Ready()
 	{
 		base._Ready();
-		// Dematerialize();
+		Dematerialize();
 	}
+	*/
 	
 	public override void _PhysicsProcess(double delta)
 	{
