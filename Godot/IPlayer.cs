@@ -1,6 +1,6 @@
 ﻿namespace Game5;
 
-public interface IPlayer
+public interface IPlayer : IMaterializeable
 {
-    
+    IPlayerController GetController();
 }

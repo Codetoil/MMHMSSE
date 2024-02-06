@@ -8,10 +8,12 @@
 [ext_resource type="PackedScene" uid="uid://diyu06cw06syv" path="res://addons/godot-xr-tools/player/player_body.tscn" id="6_p5lbh"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_pnjfh"]
+radius = 0.25
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_uqltb"]
+radius = 0.25
 
-[node name="XRPlayer" type="Node3D"]
+[node name="XrPlayer" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 script = ExtResource("1_ogwk5")
 

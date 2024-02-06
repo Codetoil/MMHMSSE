@@ -39,17 +39,15 @@ public partial class Main : Node
 		var playerScene = (PackedScene) ResourceLoader.Load("res://XrPlayer.tscn");
 		var xrPlayer = (XrPlayer) playerScene.Instantiate();
 		xrPlayer.Position = new Vector3(0, 6, 0);
-		xrPlayer.Controller = new XrPlayerController(xrPlayer);
 		AddChild(xrPlayer);
 		return xrPlayer;
 	}
 	
-	public Player CreatePlayer()
+	public WindowPlayer CreatePlayer()
 	{
-		var playerScene = (PackedScene) ResourceLoader.Load("res://Player.tscn");
-		var player = (Player) playerScene.Instantiate();
+		var playerScene = (PackedScene) ResourceLoader.Load("res://WindowPlayer.tscn");
+		var player = (WindowPlayer) playerScene.Instantiate();
 		player.Position = new Vector3(0, 6, 0);
-		player.Controller = new PlayerController(player);
 		AddChild(player);
 		return player;
 	}

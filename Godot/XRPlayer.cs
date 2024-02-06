@@ -1,26 +1,25 @@
-namespace Game5;
-
 using Godot;
 
-public partial class XrPlayer : Node3D, IMaterializeable, IPlayer
+namespace Game5;
+
+public partial class XrPlayer : Node3D, IPlayer
 {
 	private const float FallAcceleration = 9.8f;
-	public XrPlayerController Controller;
+	private IXrPlayerController _controller;
 	private Mesh _mesh;
 	private bool _materialized = true;
 
-	/*
 	public override void _Ready()
 	{
 		base._Ready();
-		Dematerialize();
+		// Dematerialize();
+		_controller = new XrPlayerController(this);
 	}
-	*/
 
 	public override void _Process(double delta)
 	{
 		base._Process(delta);
-		Controller.ProcessControls();
+		_controller.ProcessControls();
 	}
 
 	public override void _PhysicsProcess(double delta)
@@ -57,5 +56,10 @@ public partial class XrPlayer : Node3D, IMaterializeable, IPlayer
 	public bool IsMaterialized()
 	{
 		return _materialized;
+	}
+
+	public IPlayerController GetController()
+	{
+		return _controller;
 	}
 }

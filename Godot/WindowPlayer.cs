@@ -1,26 +1,25 @@
-namespace Game5;
-
 using Godot;
 
-public partial class Player : CharacterBody3D, IMaterializeable, IPlayer
+namespace Game5;
+
+public partial class WindowPlayer : CharacterBody3D, IPlayer
 {
 	private const float FallAcceleration = 9.8f;
-	public PlayerController Controller;
+	private IWindowPlayerController _controller;
 	private Mesh _mesh;
 	private bool _materialized = true;
 
-	/*
 	public override void _Ready()
 	{
 		base._Ready();
-		Dematerialize();
+		// Dematerialize();
+		_controller = new WindowPlayerController(this);
 	}
-	*/
 
 	public override void _Process(double delta)
 	{
 		base._Process(delta);
-		Controller.ProcessMovementControls();
+		_controller.ProcessMovementControls();
 	}
 
 	public override void _PhysicsProcess(double delta)
@@ -40,7 +39,7 @@ public partial class Player : CharacterBody3D, IMaterializeable, IPlayer
 	public override void _Input(InputEvent @event)
 	{
 		base._Input(@event);
-		Controller.ProcessMouseControls(@event);
+		_controller.ProcessMouseControls(@event);
 	}
 
 	public void Materialize()
@@ -63,5 +62,10 @@ public partial class Player : CharacterBody3D, IMaterializeable, IPlayer
 	public bool IsMaterialized()
 	{
 		return _materialized;
+	}
+
+	public IPlayerController GetController()
+	{
+		return _controller;
 	}
 }
