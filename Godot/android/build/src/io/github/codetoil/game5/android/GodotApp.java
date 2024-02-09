@@ -28,7 +28,7 @@
 /* SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.                 */
 /**************************************************************************/
 
-package com.godot.game;
+package io.github.codetoil.game5.android;
 
 import org.godotengine.godot.GodotActivity;
 
