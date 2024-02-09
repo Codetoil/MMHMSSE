@@ -74,8 +74,8 @@ dependencies {
 
 android {
     compileSdkVersion versions.compileSdk
+    buildToolsVersion versions.buildTools
     ndkVersion versions.ndkVersion
-    namespace versions.namespace
 
     compileOptions {
         sourceCompatibility versions.javaVersion
@@ -111,13 +111,16 @@ android {
         missingDimensionStrategy 'products', 'template'
     }
 
+    lintOptions {
+        abortOnError false
+        disable 'MissingTranslation', 'UnusedResources'
+    }
 
     ndkVersion versions.ndkVersion
 
     packagingOptions {
-        resources {
-            excludes += ['META-INF/LICENSE', 'META-INF/NOTICE']
-        }
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/NOTICE'
 
         // 'doNotStrip' is enabled for development within Android Studio
         if (shouldNotStrip()) {
@@ -194,10 +197,6 @@ android {
         debug.jniLibs.srcDirs = ['libs/debug', 'libs/debug/vulkan_validation_layers']
         dev.jniLibs.srcDirs = ['libs/dev']
         release.jniLibs.srcDirs = ['libs/release']
-    }
-    lint {
-        abortOnError false
-        disable 'MissingTranslation', 'UnusedResources'
     }
 
     applicationVariants.all { variant ->
