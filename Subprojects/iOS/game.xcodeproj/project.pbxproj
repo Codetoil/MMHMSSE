@@ -19,8 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1F1575711F582BE20003B888 /* dylibs */ = {isa = PBXFileReference; lastKnownFileType = folder; name = dylibs; path = game5/dylibs; sourceTree = "<group>"; };
-		1FF4C1881F584E6300A41E41 /* game5.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = game5.entitlements; sourceTree = "<group>"; };
+		1F1575711F582BE20003B888 /* dylibs */ = {isa = PBXFileReference; lastKnownFileType = folder; name = dylibs; path = game/dylibs; sourceTree = "<group>"; };
+		1FF4C1881F584E6300A41E41 /* game.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = game.entitlements; sourceTree = "<group>"; };
 		1FF8DBB01FBA9DE1009DE660 /* dummy.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = dummy.cpp; sourceTree = "<group>"; };
 		9039D3BD24C093AC0020482C /* MoltenVK */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = MoltenVK; path = MoltenVK.xcframework; sourceTree = "<group>"; };
 		90DD2D9D24B36E8000717FE1 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
@@ -29,8 +29,8 @@
 		9CCD518C2B6B6ADD000F95E4 /* arkit.release.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = arkit.release.xcframework; sourceTree = "<group>"; };
 		9CCD51902B6B6AE7000F95E4 /* gamecenter.release.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = gamecenter.release.xcframework; sourceTree = "<group>"; };
 		D07CD44D1C5D589C00B7FB28 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		D0BCFE3418AEBDA2004A7AAE /* game5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = game5.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		D0BCFE4318AEBDA2004A7AAE /* game5-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "game5-Info.plist"; sourceTree = "<group>"; };
+		D0BCFE3418AEBDA2004A7AAE /* game.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = game.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0BCFE4318AEBDA2004A7AAE /* game-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "game-Info.plist"; sourceTree = "<group>"; };
 		D0BCFE4518AEBDA2004A7AAE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -54,7 +54,7 @@
 			children = (
 				9CCD51862B6B5E5B000F95E4 /* Godot */,
 				1F1575711F582BE20003B888 /* dylibs */,
-				D0BCFE4118AEBDA2004A7AAE /* game5 */,
+				D0BCFE4118AEBDA2004A7AAE /* game */,
 				D0BCFE3618AEBDA2004A7AAE /* Frameworks */,
 				D0BCFE3518AEBDA2004A7AAE /* Products */,
 			);
@@ -63,7 +63,7 @@
 		D0BCFE3518AEBDA2004A7AAE /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D0BCFE3418AEBDA2004A7AAE /* game5.app */,
+				D0BCFE3418AEBDA2004A7AAE /* game.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -79,22 +79,22 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		D0BCFE4118AEBDA2004A7AAE /* game5 */ = {
+		D0BCFE4118AEBDA2004A7AAE /* game */ = {
 			isa = PBXGroup;
 			children = (
 				90DD2D9D24B36E8000717FE1 /* Launch Screen.storyboard */,
-				1FF4C1881F584E6300A41E41 /* game5.entitlements */,
+				1FF4C1881F584E6300A41E41 /* game.entitlements */,
 				D07CD44D1C5D589C00B7FB28 /* Images.xcassets */,
 				D0BCFE4218AEBDA2004A7AAE /* Supporting Files */,
 				1FF8DBB01FBA9DE1009DE660 /* dummy.cpp */,
 			);
-			path = game5;
+			path = game;
 			sourceTree = "<group>";
 		};
 		D0BCFE4218AEBDA2004A7AAE /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				D0BCFE4318AEBDA2004A7AAE /* game5-Info.plist */,
+				D0BCFE4318AEBDA2004A7AAE /* game-Info.plist */,
 				D0BCFE4418AEBDA2004A7AAE /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
@@ -103,9 +103,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D0BCFE3318AEBDA2004A7AAE /* game5 */ = {
+		D0BCFE3318AEBDA2004A7AAE /* game */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D0BCFE7118AEBDA3004A7AAE /* Build configuration list for PBXNativeTarget "game5" */;
+			buildConfigurationList = D0BCFE7118AEBDA3004A7AAE /* Build configuration list for PBXNativeTarget "game" */;
 			buildPhases = (
 				D0BCFE3018AEBDA2004A7AAE /* Sources */,
 				D0BCFE3118AEBDA2004A7AAE /* Frameworks */,
@@ -115,9 +115,9 @@
 			);
 			dependencies = (
 			);
-			name = game5;
-			productName = "Game 5";
-			productReference = D0BCFE3418AEBDA2004A7AAE /* game5.app */;
+			name = game;
+			productName = "Game";
+			productReference = D0BCFE3418AEBDA2004A7AAE /* game.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -127,7 +127,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
-				CLASSPREFIX = io.github.codetoil.game5;
+				CLASSPREFIX = io.github.codetoil.game;
 				LastUpgradeCheck = 1520;
 				ORGANIZATIONNAME = "";
 				TargetAttributes = {
@@ -138,7 +138,7 @@
 					};
 				};
 			};
-			buildConfigurationList = D0BCFE2F18AEBDA2004A7AAE /* Build configuration list for PBXProject "game5" */;
+			buildConfigurationList = D0BCFE2F18AEBDA2004A7AAE /* Build configuration list for PBXProject "game" */;
 			compatibilityVersion = "Xcode 15.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -151,7 +151,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D0BCFE3318AEBDA2004A7AAE /* game5 */,
+				D0BCFE3318AEBDA2004A7AAE /* game */,
 			);
 		};
 /* End PBXProject section */
@@ -319,7 +319,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = game5/game5.entitlements;
+				CODE_SIGN_ENTITLEMENTS = game/game.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
@@ -327,9 +327,9 @@
 				CURRENT_PROJECT_VERSION = 1.0.0;
 				DEVELOPMENT_TEAM = TVGQDNYPQY;
 				EXCLUDED_ARCHS = "";
-				EXECUTABLE_NAME = game5;
-				INFOPLIST_FILE = "game5/game5-Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "Game 5";
+				EXECUTABLE_NAME = game;
+				INFOPLIST_FILE = "game/game-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Game";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.simulation-games";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -341,8 +341,8 @@
 					"$(PROJECT_DIR)/**",
 				);
 				MARKETING_VERSION = 1.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = io.github.codetoil.game5.iOS;
-				PRODUCT_NAME = game5;
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.codetoil.game.iOS;
+				PRODUCT_NAME = game;
 				PROVISIONING_PROFILE = "";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -358,7 +358,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = game5/game5.entitlements;
+				CODE_SIGN_ENTITLEMENTS = game/game.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Automatic;
@@ -366,9 +366,9 @@
 				CURRENT_PROJECT_VERSION = 1.0.0;
 				DEVELOPMENT_TEAM = "";
 				EXCLUDED_ARCHS = "";
-				EXECUTABLE_NAME = game5;
-				INFOPLIST_FILE = "game5/game5-Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "Game 5";
+				EXECUTABLE_NAME = game;
+				INFOPLIST_FILE = "game/game-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Game";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.simulation-games";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -380,8 +380,8 @@
 					"$(PROJECT_DIR)/**",
 				);
 				MARKETING_VERSION = 1.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = io.github.codetoil.game5.iOS;
-				PRODUCT_NAME = game5;
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.codetoil.game.iOS;
+				PRODUCT_NAME = game;
 				PROVISIONING_PROFILE = "";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -396,7 +396,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D0BCFE2F18AEBDA2004A7AAE /* Build configuration list for PBXProject "game5" */ = {
+		D0BCFE2F18AEBDA2004A7AAE /* Build configuration list for PBXProject "game" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D0BCFE6F18AEBDA3004A7AAE /* Debug */,
@@ -405,7 +405,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		D0BCFE7118AEBDA3004A7AAE /* Build configuration list for PBXNativeTarget "game5" */ = {
+		D0BCFE7118AEBDA3004A7AAE /* Build configuration list for PBXNativeTarget "game" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D0BCFE7218AEBDA3004A7AAE /* Debug */,
