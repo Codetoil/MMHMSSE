@@ -1,25 +1,27 @@
 ext.versions = [
-    androidGradlePlugin: '8.1.4',
-    compileSdk         : 33,
-    // Also update 'platform/android/export/export_plugin.cpp#OPENGL_MIN_SDK_VERSION'
-    minSdk             : 33,
-    // Also update 'platform/android/export/export_plugin.cpp#DEFAULT_TARGET_SDK_VERSION'
-    targetSdk          : 33,
-    buildTools         : '33.0.2',
-    kotlinVersion      : '1.9.22',
-    fragmentVersion    : '1.6.2',
-    nexusPublishVersion: '1.1.0',
-    javaVersion        : 17,
-    // Also update 'platform/android/detect.py#get_ndk_version()' when this is updated.
-    ndkVersion         : '23.2.8568313'
+        androidGradlePlugin     : '8.1.4',
+        compileSdk              : 33,
+        // Also update 'platform/android/export/export_plugin.cpp#OPENGL_MIN_SDK_VERSION'
+        minSdk                  : 33,
+        // Also update 'platform/android/export/export_plugin.cpp#DEFAULT_TARGET_SDK_VERSION'
+        targetSdk               : 33,
+        buildTools              : '33.0.2',
+        kotlinVersion           : '1.9.22',
+        fragmentVersion         : '1.6.2',
+        nexusPublishVersion     : '1.1.0',
+        javaVersion             : 17,
+        // Also update 'platform/android/detect.py#get_ndk_version()' when this is updated.
+        ndkVersion              : '23.2.8568313',
+        playServicesGamesVersion: '19.0.0',
 
 ]
 
 ext.libraries = [
-    androidGradlePlugin: "com.android.tools.build:gradle:$versions.androidGradlePlugin",
-    kotlinGradlePlugin : "org.jetbrains.kotlin:kotlin-gradle-plugin:$versions.kotlinVersion",
-    kotlinStdLib       : "org.jetbrains.kotlin:kotlin-stdlib:$versions.kotlinVersion",
-    androidxFragment   : "androidx.fragment:fragment:$versions.fragmentVersion",
+        androidGradlePlugin: "com.android.tools.build:gradle:$versions.androidGradlePlugin",
+        kotlinGradlePlugin : "org.jetbrains.kotlin:kotlin-gradle-plugin:$versions.kotlinVersion",
+        kotlinStdLib       : "org.jetbrains.kotlin:kotlin-stdlib:$versions.kotlinVersion",
+        androidxFragment   : "androidx.fragment:fragment:$versions.fragmentVersion",
+        playServicesGames  : "com.google.android.gms:play-services-games-v2:$versions.playServicesGamesVersion",
 ]
 
 ext.getExportPackageName = { ->
@@ -27,7 +29,7 @@ ext.getExportPackageName = { ->
     String appId = project.hasProperty("export_package_name") ? project.property("export_package_name") : ""
     // Check if the app id is valid, otherwise use the default.
     if (appId == null || appId.isEmpty()) {
-        appId = "io.github.codetoil.game5.game"
+        appId = "io.github.codetoil.game.game"
     }
     return appId
 }
@@ -207,7 +209,7 @@ ext.getExportEnabledABIs = { ->
     }
     Set<String> exportAbiFilter = [];
     for (String abi_name : enabledABIs.split(VALUE_SEPARATOR_REGEX)) {
-        if (!abi_name.trim().isEmpty()){
+        if (!abi_name.trim().isEmpty()) {
             exportAbiFilter.add(abi_name);
         }
     }
@@ -261,7 +263,7 @@ ext.getGodotPluginsRemoteBinaries = { ->
     if (project.hasProperty("plugins_remote_binaries")) {
         String remoteDepsList = project.property("plugins_remote_binaries")
         if (remoteDepsList != null && !remoteDepsList.trim().isEmpty()) {
-            for (String dep: remoteDepsList.split(VALUE_SEPARATOR_REGEX)) {
+            for (String dep : remoteDepsList.split(VALUE_SEPARATOR_REGEX)) {
                 remoteDeps += dep.trim()
             }
         }

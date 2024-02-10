@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:versionCode="1"
-    android:versionName="1.0"
+    android:versionName="0.1.0"
     android:installLocation="auto" >
 
     <supports-screens
@@ -31,7 +31,7 @@
             android:value="${godotEditorVersion}" />
 
         <activity
-            android:name="io.github.codetoil.game5.android.GodotApp"
+            android:name="io.github.codetoil.game.android.GodotApp"
             android:theme="@style/GodotAppSplashTheme"
             android:launchMode="singleInstancePerTask"
             android:excludeFromRecents="false"
