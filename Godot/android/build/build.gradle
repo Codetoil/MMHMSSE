@@ -44,7 +44,6 @@ configurations {
 dependencies {
     implementation libraries.kotlinStdLib
     implementation libraries.androidxFragment
-    implementation libraries.playServicesGames
 
     if (rootProject.findProject(":lib")) {
         implementation project(":lib")
@@ -77,7 +76,7 @@ android {
     compileSdkVersion versions.compileSdk
     buildToolsVersion versions.buildTools
     ndkVersion versions.ndkVersion
-    namespace "io.github.codetoil.game.android"
+    namespace "com.godot.game"
 
     compileOptions {
         sourceCompatibility versions.javaVersion
@@ -191,8 +190,8 @@ android {
             java.srcDirs = ['src']
             res.srcDirs = ['res']
             aidl.srcDirs = ['aidl']
-            assets.srcDirs = ['assets']
             assets {
+                srcDirs = ['assets']
                 exclude 'android/**'
             }
         }

@@ -1,4 +1,6 @@
-Linux/arm64/game5.arm64
-Linux/x64/game5.x86_64
-macOS/game5.x64.dmg
-Windows/x64/game5.x64.exe
+Linux/arm64/game.arm64
+Linux/x64/game.x86_64
+macOS/game.x64.dmg
+Windows/x64/game.x64.exe
+Meta/arm64/game.arm64.apk
+Meta/x64/game.x64.apk

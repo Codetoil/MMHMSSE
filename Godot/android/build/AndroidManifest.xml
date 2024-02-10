@@ -31,7 +31,7 @@
             android:value="${godotEditorVersion}" />
 
         <activity
-            android:name="io.github.codetoil.game.android.GodotApp"
+            android:name="com.godot.game.GodotApp"
             android:theme="@style/GodotAppSplashTheme"
             android:launchMode="singleInstancePerTask"
             android:excludeFromRecents="false"
