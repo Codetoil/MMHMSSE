@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -194,7 +194,7 @@
 				};
 			};
 			buildConfigurationList = 9CA157DF2B5DC6D30088C993 /* Build configuration list for PBXProject "game-visionOS" */;
-			compatibilityVersion = "Xcode 14.0";
+			compatibilityVersion = "Xcode 15.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -396,7 +396,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "$(TARGET_NAME)/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "Game 5";
+				INFOPLIST_KEY_CFBundleDisplayName = Game;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.simulation-games";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -427,7 +427,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "$(TARGET_NAME)/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "Game 5";
+				INFOPLIST_KEY_CFBundleDisplayName = Game;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.simulation-games";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

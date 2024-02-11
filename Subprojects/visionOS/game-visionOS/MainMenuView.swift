@@ -4,7 +4,7 @@
 
 import SwiftUI
 import RealityKit
-import Game5Content
+import GameContent
 
 struct MainMenuView: View {
 
@@ -35,14 +35,14 @@ struct MainMenuView: View {
     {
         if (!immersiveSpaceIsShown)
         {
-            return Button("Play Game", systemImage: "play.fill") {
+            return Button("Join Game", systemImage: "play.fill") {
                 print("Started")
                 Task {
                     await playFunction()
                 }
             }.font(.title)
         } else {
-            return Button("Stop Game", systemImage: "stop.fill") {
+            return Button("Leave Game", systemImage: "stop.fill") {
                 print("Stopping")
                 Task {
                     await exitFunction()
