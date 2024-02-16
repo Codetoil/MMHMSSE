@@ -7,31 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9CBD6AC32B7DD85A005595D0 /* GamevisionOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBD6AB92B7DD85A005595D0 /* GamevisionOSApp.swift */; };
-		9CBD6AC42B7DD85A005595D0 /* MainMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBD6ABA2B7DD85A005595D0 /* MainMenuView.swift */; };
-		9CBD6AC52B7DD85A005595D0 /* DebugView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBD6ABB2B7DD85A005595D0 /* DebugView.swift */; };
-		9CBD6AC62B7DD85A005595D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CBD6ABC2B7DD85A005595D0 /* Assets.xcassets */; };
-		9CBD6AC72B7DD85A005595D0 /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = 9CBD6ABD2B7DD85A005595D0 /* Shaders.metal */; };
-		9CBD6AC82B7DD85A005595D0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CBD6ABF2B7DD85A005595D0 /* Preview Assets.xcassets */; };
-		9CBD6ACA2B7DD85A005595D0 /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBD6AC22B7DD85A005595D0 /* Renderer.swift */; };
-		9CBD6ACD2B7DD863005595D0 /* GamevisionOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBD6ACC2B7DD863005595D0 /* GamevisionOSTests.swift */; };
-		9CBD6AD02B7DD872005595D0 /* GameContent in Resources */ = {isa = PBXBuildFile; fileRef = 9CBD6ACF2B7DD872005595D0 /* GameContent */; };
-		9CDE98272B6D47F0005AC5F7 /* GameContent in Frameworks */ = {isa = PBXBuildFile; productRef = 9CDE98262B6D47F0005AC5F7 /* GameContent */; };
+		9CBD6B072B7FC173005595D0 /* game_visionOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBD6B062B7FC173005595D0 /* game_visionOSApp.swift */; };
+		9CBD6B092B7FC173005595D0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBD6B082B7FC173005595D0 /* ContentView.swift */; };
+		9CBD6B0F2B7FC175005595D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CBD6B0E2B7FC175005595D0 /* Assets.xcassets */; };
+		9CBD6B122B7FC175005595D0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CBD6B112B7FC175005595D0 /* Preview Assets.xcassets */; };
+		9CBD6B1D2B7FC176005595D0 /* game_visionOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBD6B1C2B7FC176005595D0 /* game_visionOSTests.swift */; };
+		9CBD6B2C2B7FC1A9005595D0 /* MainMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBD6B252B7FC1A9005595D0 /* MainMenuView.swift */; };
+		9CBD6B2E2B7FC1A9005595D0 /* DebugView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBD6B272B7FC1A9005595D0 /* DebugView.swift */; };
+		9CBD6B322B7FC4B9005595D0 /* GodotVision in Frameworks */ = {isa = PBXBuildFile; productRef = 9CBD6B312B7FC4B9005595D0 /* GodotVision */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		9CA157FF2B5DC6D50088C993 /* PBXContainerItemProxy */ = {
+		9CBD6B192B7FC176005595D0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 9CA157DC2B5DC6D30088C993 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 9CA157E32B5DC6D30088C993;
+			remoteGlobalIDString = 9CBD6B012B7FC173005595D0;
 			remoteInfo = "game-visionOS";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		9CA157E42B5DC6D30088C993 /* game-visionOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "game-visionOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		9CA157FE2B5DC6D50088C993 /* game-visionOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "game-visionOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C0BAB552B7FC635002EA43E /* game-visionOS.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = "game-visionOS.xctestplan"; sourceTree = "<group>"; };
 		9CBD64012B7DBE5D005595D0 /* Main.tscn */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Main.tscn; sourceTree = "<group>"; };
 		9CBD64022B7DBE5D005595D0 /* IWindowPlayerController.cs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = IWindowPlayerController.cs; sourceTree = "<group>"; };
 		9CBD64032B7DBE5D005595D0 /* download.png.import */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = download.png.import; sourceTree = "<group>"; };
@@ -776,29 +773,30 @@
 		9CBD67C22B7DBE5E005595D0 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		9CBD67C32B7DBE5E005595D0 /* workspace.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = workspace.xml; sourceTree = "<group>"; };
 		9CBD67C42B7DBE5E005595D0 /* .name */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .name; sourceTree = "<group>"; };
-		9CBD6AB92B7DD85A005595D0 /* GamevisionOSApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GamevisionOSApp.swift; sourceTree = "<group>"; };
-		9CBD6ABA2B7DD85A005595D0 /* MainMenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMenuView.swift; sourceTree = "<group>"; };
-		9CBD6ABB2B7DD85A005595D0 /* DebugView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebugView.swift; sourceTree = "<group>"; };
-		9CBD6ABC2B7DD85A005595D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		9CBD6ABD2B7DD85A005595D0 /* Shaders.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = Shaders.metal; sourceTree = "<group>"; };
-		9CBD6ABF2B7DD85A005595D0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		9CBD6AC02B7DD85A005595D0 /* ShaderTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShaderTypes.h; sourceTree = "<group>"; };
-		9CBD6AC12B7DD85A005595D0 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9CBD6AC22B7DD85A005595D0 /* Renderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Renderer.swift; sourceTree = "<group>"; };
-		9CBD6ACC2B7DD863005595D0 /* GamevisionOSTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GamevisionOSTests.swift; sourceTree = "<group>"; };
-		9CBD6ACF2B7DD872005595D0 /* GameContent */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = GameContent; sourceTree = "<group>"; };
+		9CBD6B022B7FC173005595D0 /* game-visionOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "game-visionOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9CBD6B062B7FC173005595D0 /* game_visionOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = game_visionOSApp.swift; sourceTree = "<group>"; };
+		9CBD6B082B7FC173005595D0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		9CBD6B0E2B7FC175005595D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9CBD6B112B7FC175005595D0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		9CBD6B132B7FC175005595D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9CBD6B182B7FC175005595D0 /* game-visionOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "game-visionOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9CBD6B1C2B7FC176005595D0 /* game_visionOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = game_visionOSTests.swift; sourceTree = "<group>"; };
+		9CBD6B242B7FC1A9005595D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9CBD6B252B7FC1A9005595D0 /* MainMenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMenuView.swift; sourceTree = "<group>"; };
+		9CBD6B272B7FC1A9005595D0 /* DebugView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebugView.swift; sourceTree = "<group>"; };
+		9CBD6B292B7FC1A9005595D0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		9CA157E12B5DC6D30088C993 /* Frameworks */ = {
+		9CBD6AFF2B7FC173005595D0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9CDE98272B6D47F0005AC5F7 /* GameContent in Frameworks */,
+				9CBD6B322B7FC4B9005595D0 /* GodotVision in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9CA157FB2B5DC6D50088C993 /* Frameworks */ = {
+		9CBD6B152B7FC175005595D0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -818,10 +816,11 @@
 		9CA157DB2B5DC6D30088C993 = {
 			isa = PBXGroup;
 			children = (
-				9CBD64002B7DBE5D005595D0 /* Godot */,
-				9CBD6AB82B7DD85A005595D0 /* game-visionOS */,
-				9CBD6ACB2B7DD863005595D0 /* game-visionOSTests */,
+				9C0BAB552B7FC635002EA43E /* game-visionOS.xctestplan */,
+				9CBD64002B7DBE5D005595D0 /* game-common */,
 				9CBD6ACE2B7DD872005595D0 /* Packages */,
+				9CBD6B032B7FC173005595D0 /* game-visionOS */,
+				9CBD6B1B2B7FC176005595D0 /* game-visionOSTests */,
 				9CA157E52B5DC6D30088C993 /* Products */,
 				9C76CC962B5DD4C100543AF1 /* Frameworks */,
 			);
@@ -830,13 +829,13 @@
 		9CA157E52B5DC6D30088C993 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9CA157E42B5DC6D30088C993 /* game-visionOS.app */,
-				9CA157FE2B5DC6D50088C993 /* game-visionOSTests.xctest */,
+				9CBD6B022B7FC173005595D0 /* game-visionOS.app */,
+				9CBD6B182B7FC175005595D0 /* game-visionOSTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		9CBD64002B7DBE5D005595D0 /* Godot */ = {
+		9CBD64002B7DBE5D005595D0 /* game-common */ = {
 			isa = PBXGroup;
 			children = (
 				9CBD64012B7DBE5D005595D0 /* Main.tscn */,
@@ -867,7 +866,7 @@
 				9CBD67BA2B7DBE5E005595D0 /* download.exr.import */,
 				9CBD67BB2B7DBE5E005595D0 /* .idea */,
 			);
-			path = Godot;
+			path = "game-common";
 			sourceTree = "<group>";
 		};
 		9CBD64082B7DBE5D005595D0 /* .godot */ = {
@@ -3339,56 +3338,63 @@
 			path = .idea;
 			sourceTree = "<group>";
 		};
-		9CBD6AB82B7DD85A005595D0 /* game-visionOS */ = {
+		9CBD6ACE2B7DD872005595D0 /* Packages */ = {
 			isa = PBXGroup;
 			children = (
-				9CBD6AB92B7DD85A005595D0 /* GamevisionOSApp.swift */,
-				9CBD6ABA2B7DD85A005595D0 /* MainMenuView.swift */,
-				9CBD6ABB2B7DD85A005595D0 /* DebugView.swift */,
-				9CBD6ABC2B7DD85A005595D0 /* Assets.xcassets */,
-				9CBD6ABD2B7DD85A005595D0 /* Shaders.metal */,
-				9CBD6ABE2B7DD85A005595D0 /* Preview Content */,
-				9CBD6AC02B7DD85A005595D0 /* ShaderTypes.h */,
-				9CBD6AC12B7DD85A005595D0 /* Info.plist */,
-				9CBD6AC22B7DD85A005595D0 /* Renderer.swift */,
+			);
+			path = Packages;
+			sourceTree = "<group>";
+		};
+		9CBD6B032B7FC173005595D0 /* game-visionOS */ = {
+			isa = PBXGroup;
+			children = (
+				9CBD6B242B7FC1A9005595D0 /* Assets.xcassets */,
+				9CBD6B272B7FC1A9005595D0 /* DebugView.swift */,
+				9CBD6B252B7FC1A9005595D0 /* MainMenuView.swift */,
+				9CBD6B282B7FC1A9005595D0 /* Preview Content */,
+				9CBD6B062B7FC173005595D0 /* game_visionOSApp.swift */,
+				9CBD6B082B7FC173005595D0 /* ContentView.swift */,
+				9CBD6B0E2B7FC175005595D0 /* Assets.xcassets */,
+				9CBD6B132B7FC175005595D0 /* Info.plist */,
+				9CBD6B102B7FC175005595D0 /* Preview Content */,
 			);
 			path = "game-visionOS";
 			sourceTree = "<group>";
 		};
-		9CBD6ABE2B7DD85A005595D0 /* Preview Content */ = {
+		9CBD6B102B7FC175005595D0 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				9CBD6ABF2B7DD85A005595D0 /* Preview Assets.xcassets */,
+				9CBD6B112B7FC175005595D0 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		9CBD6ACB2B7DD863005595D0 /* game-visionOSTests */ = {
+		9CBD6B1B2B7FC176005595D0 /* game-visionOSTests */ = {
 			isa = PBXGroup;
 			children = (
-				9CBD6ACC2B7DD863005595D0 /* GamevisionOSTests.swift */,
+				9CBD6B1C2B7FC176005595D0 /* game_visionOSTests.swift */,
 			);
 			path = "game-visionOSTests";
 			sourceTree = "<group>";
 		};
-		9CBD6ACE2B7DD872005595D0 /* Packages */ = {
+		9CBD6B282B7FC1A9005595D0 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				9CBD6ACF2B7DD872005595D0 /* GameContent */,
+				9CBD6B292B7FC1A9005595D0 /* Preview Assets.xcassets */,
 			);
-			path = Packages;
+			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		9CA157E32B5DC6D30088C993 /* game-visionOS */ = {
+		9CBD6B012B7FC173005595D0 /* game-visionOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9CA158062B5DC6D50088C993 /* Build configuration list for PBXNativeTarget "game-visionOS" */;
+			buildConfigurationList = 9CBD6B1E2B7FC176005595D0 /* Build configuration list for PBXNativeTarget "game-visionOS" */;
 			buildPhases = (
-				9CA157E02B5DC6D30088C993 /* Sources */,
-				9CA157E12B5DC6D30088C993 /* Frameworks */,
-				9CA157E22B5DC6D30088C993 /* Resources */,
+				9CBD6AFE2B7FC173005595D0 /* Sources */,
+				9CBD6AFF2B7FC173005595D0 /* Frameworks */,
+				9CBD6B002B7FC173005595D0 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -3396,28 +3402,28 @@
 			);
 			name = "game-visionOS";
 			packageProductDependencies = (
-				9CDE98262B6D47F0005AC5F7 /* GameContent */,
+				9CBD6B312B7FC4B9005595D0 /* GodotVision */,
 			);
 			productName = "game-visionOS";
-			productReference = 9CA157E42B5DC6D30088C993 /* game-visionOS.app */;
+			productReference = 9CBD6B022B7FC173005595D0 /* game-visionOS.app */;
 			productType = "com.apple.product-type.application";
 		};
-		9CA157FD2B5DC6D50088C993 /* game-visionOSTests */ = {
+		9CBD6B172B7FC175005595D0 /* game-visionOSTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9CA158092B5DC6D50088C993 /* Build configuration list for PBXNativeTarget "game-visionOSTests" */;
+			buildConfigurationList = 9CBD6B212B7FC176005595D0 /* Build configuration list for PBXNativeTarget "game-visionOSTests" */;
 			buildPhases = (
-				9CA157FA2B5DC6D50088C993 /* Sources */,
-				9CA157FB2B5DC6D50088C993 /* Frameworks */,
-				9CA157FC2B5DC6D50088C993 /* Resources */,
+				9CBD6B142B7FC175005595D0 /* Sources */,
+				9CBD6B152B7FC175005595D0 /* Frameworks */,
+				9CBD6B162B7FC175005595D0 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				9CA158002B5DC6D50088C993 /* PBXTargetDependency */,
+				9CBD6B1A2B7FC176005595D0 /* PBXTargetDependency */,
 			);
 			name = "game-visionOSTests";
 			productName = "game-visionOSTests";
-			productReference = 9CA157FE2B5DC6D50088C993 /* game-visionOSTests.xctest */;
+			productReference = 9CBD6B182B7FC175005595D0 /* game-visionOSTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -3430,12 +3436,12 @@
 				LastSwiftUpdateCheck = 1520;
 				LastUpgradeCheck = 1520;
 				TargetAttributes = {
-					9CA157E32B5DC6D30088C993 = {
+					9CBD6B012B7FC173005595D0 = {
 						CreatedOnToolsVersion = 15.2;
 					};
-					9CA157FD2B5DC6D50088C993 = {
+					9CBD6B172B7FC175005595D0 = {
 						CreatedOnToolsVersion = 15.2;
-						TestTargetID = 9CA157E32B5DC6D30088C993;
+						TestTargetID = 9CBD6B012B7FC173005595D0;
 					};
 				};
 			};
@@ -3455,60 +3461,58 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				9CA157E32B5DC6D30088C993 /* game-visionOS */,
-				9CA157FD2B5DC6D50088C993 /* game-visionOSTests */,
+				9CBD6B012B7FC173005595D0 /* game-visionOS */,
+				9CBD6B172B7FC175005595D0 /* game-visionOSTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		9CA157E22B5DC6D30088C993 /* Resources */ = {
+		9CBD6B002B7FC173005595D0 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9CBD6AC82B7DD85A005595D0 /* Preview Assets.xcassets in Resources */,
-				9CBD6AC62B7DD85A005595D0 /* Assets.xcassets in Resources */,
+				9CBD6B0F2B7FC175005595D0 /* Assets.xcassets in Resources */,
+				9CBD6B122B7FC175005595D0 /* Preview Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9CA157FC2B5DC6D50088C993 /* Resources */ = {
+		9CBD6B162B7FC175005595D0 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9CBD6AD02B7DD872005595D0 /* GameContent in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		9CA157E02B5DC6D30088C993 /* Sources */ = {
+		9CBD6AFE2B7FC173005595D0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9CBD6AC72B7DD85A005595D0 /* Shaders.metal in Sources */,
-				9CBD6AC52B7DD85A005595D0 /* DebugView.swift in Sources */,
-				9CBD6AC42B7DD85A005595D0 /* MainMenuView.swift in Sources */,
-				9CBD6ACA2B7DD85A005595D0 /* Renderer.swift in Sources */,
-				9CBD6AC32B7DD85A005595D0 /* GamevisionOSApp.swift in Sources */,
+				9CBD6B092B7FC173005595D0 /* ContentView.swift in Sources */,
+				9CBD6B2E2B7FC1A9005595D0 /* DebugView.swift in Sources */,
+				9CBD6B072B7FC173005595D0 /* game_visionOSApp.swift in Sources */,
+				9CBD6B2C2B7FC1A9005595D0 /* MainMenuView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9CA157FA2B5DC6D50088C993 /* Sources */ = {
+		9CBD6B142B7FC175005595D0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9CBD6ACD2B7DD863005595D0 /* GamevisionOSTests.swift in Sources */,
+				9CBD6B1D2B7FC176005595D0 /* game_visionOSTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		9CA158002B5DC6D50088C993 /* PBXTargetDependency */ = {
+		9CBD6B1A2B7FC176005595D0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 9CA157E32B5DC6D30088C993 /* game-visionOS */;
-			targetProxy = 9CA157FF2B5DC6D50088C993 /* PBXContainerItemProxy */;
+			target = 9CBD6B012B7FC173005595D0 /* game-visionOS */;
+			targetProxy = 9CBD6B192B7FC176005595D0 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -3566,12 +3570,12 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
-				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = xros;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OBJC_INTEROP_MODE = objc;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				XROS_DEPLOYMENT_TARGET = 1.0;
 			};
 			name = Debug;
@@ -3623,21 +3627,20 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				MTL_FAST_MATH = YES;
 				SDKROOT = xros;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OBJC_INTEROP_MODE = objc;
+				SWIFT_VERSION = 5.0;
 				VALIDATE_PRODUCT = YES;
 				XROS_DEPLOYMENT_TARGET = 1.0;
 			};
 			name = Release;
 		};
-		9CA158072B5DC6D50088C993 /* Debug */ = {
+		9CBD6B1F2B7FC176005595D0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"game-visionOS/Preview Content\"";
@@ -3654,21 +3657,19 @@
 				MARKETING_VERSION = 0.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "io.github.codetoil.game-visionOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTED_PLATFORMS = "xros xrsimulator";
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "$(TARGET_NAME)/ShaderTypes.h";
+				SWIFT_OBJC_INTEROP_MODE = "";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2,7";
+				TARGETED_DEVICE_FAMILY = 7;
 			};
 			name = Debug;
 		};
-		9CA158082B5DC6D50088C993 /* Release */ = {
+		9CBD6B202B7FC176005595D0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"game-visionOS/Preview Content\"";
@@ -3685,16 +3686,15 @@
 				MARKETING_VERSION = 0.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "io.github.codetoil.game-visionOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTED_PLATFORMS = "xros xrsimulator";
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "$(TARGET_NAME)/ShaderTypes.h";
+				SWIFT_OBJC_INTEROP_MODE = "";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2,7";
+				TARGETED_DEVICE_FAMILY = 7;
 			};
 			name = Release;
 		};
-		9CA1580A2B5DC6D50088C993 /* Debug */ = {
+		9CBD6B222B7FC176005595D0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -3715,7 +3715,7 @@
 			};
 			name = Debug;
 		};
-		9CA1580B2B5DC6D50088C993 /* Release */ = {
+		9CBD6B232B7FC176005595D0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -3748,20 +3748,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9CA158062B5DC6D50088C993 /* Build configuration list for PBXNativeTarget "game-visionOS" */ = {
+		9CBD6B1E2B7FC176005595D0 /* Build configuration list for PBXNativeTarget "game-visionOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				9CA158072B5DC6D50088C993 /* Debug */,
-				9CA158082B5DC6D50088C993 /* Release */,
+				9CBD6B1F2B7FC176005595D0 /* Debug */,
+				9CBD6B202B7FC176005595D0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9CA158092B5DC6D50088C993 /* Build configuration list for PBXNativeTarget "game-visionOSTests" */ = {
+		9CBD6B212B7FC176005595D0 /* Build configuration list for PBXNativeTarget "game-visionOSTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				9CA1580A2B5DC6D50088C993 /* Debug */,
-				9CA1580B2B5DC6D50088C993 /* Release */,
+				9CBD6B222B7FC176005595D0 /* Debug */,
+				9CBD6B232B7FC176005595D0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -3773,16 +3773,17 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/kevinw/GodotVision.git";
 			requirement = {
-				branch = main;
-				kind = branch;
+				kind = revision;
+				revision = 22b17c5026b4226df0f3fd24d062de2ea1097a0d;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		9CDE98262B6D47F0005AC5F7 /* GameContent */ = {
+		9CBD6B312B7FC4B9005595D0 /* GodotVision */ = {
 			isa = XCSwiftPackageProductDependency;
-			productName = GameContent;
+			package = 9CBD6AB12B7DC043005595D0 /* XCRemoteSwiftPackageReference "GodotVision" */;
+			productName = GodotVision;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

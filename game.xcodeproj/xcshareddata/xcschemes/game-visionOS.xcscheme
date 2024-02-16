@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "9CA157E32B5DC6D30088C993"
+               BlueprintIdentifier = "9CBD6B012B7FC173005595D0"
                BuildableName = "game-visionOS.app"
                BlueprintName = "game-visionOS"
                ReferencedContainer = "container:game.xcodeproj">
@@ -28,7 +28,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "9CA157FD2B5DC6D50088C993"
+               BlueprintIdentifier = "9CBD6B172B7FC175005595D0"
                BuildableName = "game-visionOSTests.xctest"
                BlueprintName = "game-visionOSTests"
                ReferencedContainer = "container:game.xcodeproj">
@@ -40,8 +40,13 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES"
-      shouldAutocreateTestPlan = "YES">
+      shouldUseLaunchSchemeArgsEnv = "YES">
+      <TestPlans>
+         <TestPlanReference
+            reference = "container:game-visionOS.xctestplan"
+            default = "YES">
+         </TestPlanReference>
+      </TestPlans>
    </TestAction>
    <LaunchAction
       buildConfiguration = "Debug"
@@ -59,7 +64,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "9CA157E32B5DC6D30088C993"
+            BlueprintIdentifier = "9CBD6B012B7FC173005595D0"
             BuildableName = "game-visionOS.app"
             BlueprintName = "game-visionOS"
             ReferencedContainer = "container:game.xcodeproj">
@@ -76,7 +81,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "9CA157E32B5DC6D30088C993"
+            BlueprintIdentifier = "9CBD6B012B7FC173005595D0"
             BuildableName = "game-visionOS.app"
             BlueprintName = "game-visionOS"
             ReferencedContainer = "container:game.xcodeproj">

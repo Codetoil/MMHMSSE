@@ -5,8 +5,7 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/kevinw/GodotVision.git",
       "state" : {
-        "branch" : "main",
-        "revision" : "73e2e205cc6b2295c8aaea9e37f404f4e2ddbcaa"
+        "revision" : "22b17c5026b4226df0f3fd24d062de2ea1097a0d"
       }
     },
     {

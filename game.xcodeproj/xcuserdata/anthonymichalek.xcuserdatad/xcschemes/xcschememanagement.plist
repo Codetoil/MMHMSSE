@@ -9,6 +9,11 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>game-visionOSTests.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 		<key>game5-visionOS.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>isShown</key>
@@ -25,6 +30,16 @@
 			<true/>
 		</dict>
 		<key>9CA157FD2B5DC6D50088C993</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9CBD6B012B7FC173005595D0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9CBD6B172B7FC175005595D0</key>
 		<dict>
 			<key>primary</key>
 			<true/>
