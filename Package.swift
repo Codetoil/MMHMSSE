@@ -11,6 +11,9 @@ let package = Package(
             name: "game-visionOS",
             targets: ["game-visionOS"]),
     ],
+    dependencies: [
+        .package(url: "https://github.com/kevinw/GodotVision", revision: "22b17c5026b4226df0f3fd24d062de2ea1097a0d")
+    ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
         // Targets can depend on other targets in this package and products from dependencies.
