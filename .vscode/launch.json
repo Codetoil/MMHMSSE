@@ -4,5 +4,29 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "sourceLanguages": [
+                "swift"
+            ],
+            "args": [],
+            "cwd": "${workspaceFolder:Game}",
+            "name": "Debug GameVisionOS",
+            "program": "${workspaceFolder:Game}/.build/debug/GameVisionOS",
+            "preLaunchTask": "swift: Build Debug GameVisionOS"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "sourceLanguages": [
+                "swift"
+            ],
+            "args": [],
+            "cwd": "${workspaceFolder:Game}",
+            "name": "Release GameVisionOS",
+            "program": "${workspaceFolder:Game}/.build/release/GameVisionOS",
+            "preLaunchTask": "swift: Build Release GameVisionOS"
+        }
     ]
 }
