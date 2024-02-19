@@ -26,7 +26,7 @@ class MainNode: Node {
         } else {
             GD.print("OpenXR failed to initialized, reverting to backup player node");
             
-            player = createPlayer();
+            player = createWindowPlayer();
         }
     }
     
@@ -35,10 +35,18 @@ class MainNode: Node {
     }
     
     public func createXrPlayer() -> XrPlayer {
-        
+        var playerScene: PackedScene = ResourceLoader.load(path: "res://XrPlayer.tscn") as! PackedScene;
+        var xrPlayer: XrPlayer = playerScene.instantiate() as! XrPlayer;
+        xrPlayer.position = Vector3(x: 0, y: 6, z: 0);
+        addChild(node: xrPlayer);
+        return xrPlayer;
     }
     
-    public func createPlayer() -> WindowPlayer {
-        
+    public func createWindowPlayer() -> WindowPlayer {
+        var playerScene: PackedScene = ResourceLoader.load(path: "res://WindowPlayer.tscn") as! PackedScene;
+        var windowPlayer: WindowPlayer = playerScene.instantiate() as! WindowPlayer;
+        windowPlayer.position = Vector3(x: 0, y: 6, z: 0);
+        addChild(node: windowPlayer);
+        return windowPlayer;
     }
 }
