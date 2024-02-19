@@ -14,24 +14,24 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "game-visionOS"
-               BuildableName = "game-visionOS"
+               BlueprintIdentifier = "9C876C232B82EC7100F981B7"
+               BuildableName = "game-visionOS.app"
                BlueprintName = "game-visionOS"
-               ReferencedContainer = "container:">
+               ReferencedContainer = "container:../../game-visionOS/game-visionOS.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
             buildForTesting = "YES"
             buildForRunning = "YES"
-            buildForProfiling = "NO"
-            buildForArchiving = "NO"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "game-visionOSTests"
-               BuildableName = "game-visionOSTests"
+               BlueprintIdentifier = "9C876C3C2B82EC7300F981B7"
+               BuildableName = "game-visionOSTests.xctest"
                BlueprintName = "game-visionOSTests"
-               ReferencedContainer = "container:">
+               ReferencedContainer = "container:../../game-visionOS/game-visionOS.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -42,18 +42,6 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES"
       shouldAutocreateTestPlan = "YES">
-      <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "game-visionOSTests"
-               BuildableName = "game-visionOSTests"
-               BlueprintName = "game-visionOSTests"
-               ReferencedContainer = "container:">
-            </BuildableReference>
-         </TestableReference>
-      </Testables>
    </TestAction>
    <LaunchAction
       buildConfiguration = "Debug"
@@ -75,10 +63,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "game-visionOS"
-            BuildableName = "game-visionOS"
+            BlueprintIdentifier = "9C876C232B82EC7100F981B7"
+            BuildableName = "game-visionOS.app"
             BlueprintName = "game-visionOS"
-            ReferencedContainer = "container:">
+            ReferencedContainer = "container:../../game-visionOS/game-visionOS.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>
