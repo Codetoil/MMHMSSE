@@ -7,6 +7,7 @@
 
 import SwiftGodot;
 
+@Godot
 class XrPlayer: Node3D, PlayerProtocol {
     private final var fallAcceleration: Float = 9.8;
     private var controller: XrPlayerControllerProtocol?;

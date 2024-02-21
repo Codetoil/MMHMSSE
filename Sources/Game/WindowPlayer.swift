@@ -7,6 +7,7 @@
 
 import SwiftGodot;
 
+@Godot
 class WindowPlayer: CharacterBody3D, PlayerProtocol {
     private final var fallAcceleration: Float = 9.8;
     private var controller: WindowPlayerControllerProtocol?;

@@ -24,9 +24,6 @@ let package = Package(
         .target(
             name: "Game",
             dependencies: ["SwiftGodot"],
-            swiftSettings: [.unsafeFlags(["-suppress-warnings"])]),
-        .testTarget(
-            name: "GameTests",
-            dependencies: ["Game"])
+            swiftSettings: [.unsafeFlags(["-suppress-warnings"])])
     ]
 )
