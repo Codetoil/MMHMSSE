@@ -12,13 +12,13 @@ on:
 jobs:
   build:
 
-    runs-on: windows-latest
+    runs-on: windows-2022
 
     steps:
     - uses: actions/checkout@v3
     - uses: swift-actions/setup-swift@v1
       with:
-        swift-version: '5.9'
+        swift-version: '5.9.0'
     - name: Build
       run: swift build -v
     - name: Run tests
