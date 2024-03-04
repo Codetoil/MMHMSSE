@@ -12,9 +12,9 @@
     {
       "identity" : "swiftgodot",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/multijam/SwiftGodot",
+      "location" : "https://github.com/migueldeicaza/SwiftGodot",
       "state" : {
-        "revision" : "d80f53a47ed6f3a8f062ee2685823d013e178586"
+        "revision" : "caec7dfc054880a2aa1c43a2b2f60956242a7424"
       }
     }
   ],

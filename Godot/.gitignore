@@ -1,1 +1,3 @@
-﻿
+﻿addons/game_swift/debug/**
+addons/game_swift/release/**
+bin/**
