@@ -1,3 +1,7 @@
-﻿addons/game_swift/debug/**
-addons/game_swift/release/**
-bin/**
+﻿/addons/game_swift/debug
+/addons/game_swift/release
+/addons/godotopenxrvendors/khronos/.bin
+/addons/godotopenxrvendors/lynx/.bin
+/addons/godotopenxrvendors/meta/.bin
+/addons/godotopenxrvendors/pico/.bin
+/bin/**
