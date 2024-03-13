@@ -18,6 +18,7 @@ class WindowPlayer: CharacterBody3D, PlayerProtocol {
         super._ready();
         // dematerialize();
         controller = WindowPlayerController(windowPlayer: self);
+
     }
     
     override func _process(delta: Double) {

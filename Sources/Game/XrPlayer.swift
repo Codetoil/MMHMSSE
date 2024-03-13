@@ -18,7 +18,7 @@ class XrPlayer: Node3D, PlayerProtocol {
     override func _ready() {
         super._ready();
         // dematerialize();
-        // controller = new XrPlayerController(self);
+        controller = XrPlayerController(xrPlayer: self);
         playerBody = getNode(path: "XROrigin3D/PlayerBody") as! CharacterBody3D;
     }
     
@@ -41,15 +41,15 @@ class XrPlayer: Node3D, PlayerProtocol {
     
     func materialize() {
         materialized = true;
-        (getNode(path: "XROrigin3D/PlayerBody/CollisionShape3D") as! CollisionShape3D).disabled = false;
-        (getNode(path: "XROrigin3D/PlayerBody/Pivot/MeshInstance3D") as! MeshInstance3D).mesh = mesh;
+        (playerBody!.getNode(path: "CollisionShape3D") as! CollisionShape3D).disabled = false;
+        (playerBody!.getNode(path: "Pivot/MeshInstance3D") as! MeshInstance3D).mesh = mesh;
     }
     
     func dematerialize() {
         materialized = false;
-        (getNode(path: "XROrigin3D/PlayerBody/CollisionShape3D") as! CollisionShape3D).disabled = true;
-        mesh = (getNode(path: "XROrigin3D/PlayerBody/Pivot/MeshInstance3D") as! MeshInstance3D).mesh;
-        (getNode(path: "XROrigin3D/PlayerBody/Pivot/MeshInstance3D") as! MeshInstance3D).mesh = nil;
+        (playerBody!.getNode(path: "CollisionShape3D") as! CollisionShape3D).disabled = true;
+        mesh = (playerBody!.getNode(path: "PlayerBody/Pivot/MeshInstance3D") as! MeshInstance3D).mesh;
+        (playerBody!.getNode(path: "Pivot/MeshInstance3D") as! MeshInstance3D).mesh = nil;
     }
     
     func isMaterialized() -> Bool {

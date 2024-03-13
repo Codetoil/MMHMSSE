@@ -11,7 +11,7 @@ radius = 0.25
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_pnjfh"]
 radius = 0.25
 
-[node name="WindowPlayer" type="Node3D"]
+[node name="WindowPlayer" type="WindowPlayer"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 
 [node name="CameraPivot" type="Marker3D" parent="."]
@@ -19,24 +19,22 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 [node name="Camera3D" type="Camera3D" parent="CameraPivot"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
 
-[node name="PlayerBody" type="CharacterBody3D" parent="."]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="PlayerBody"]
-shape = SubResource("CapsuleShape3D_uqltb")
-
-[node name="LeftHandLow" parent="PlayerBody" instance=ExtResource("2_cvrwu")]
+[node name="LeftHandLow" parent="." instance=ExtResource("2_cvrwu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0.25, 0)
 
-[node name="RightHandLow" parent="PlayerBody" instance=ExtResource("3_jet8q")]
+[node name="RightHandLow" parent="." instance=ExtResource("3_jet8q")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0.25, 0)
 
-[node name="LeftHandHigh" parent="PlayerBody" instance=ExtResource("3_u61eu")]
+[node name="LeftHandHigh" parent="." instance=ExtResource("3_u61eu")]
 visible = false
 
-[node name="RightHandHigh" parent="PlayerBody" instance=ExtResource("4_rv4b3")]
+[node name="RightHandHigh" parent="." instance=ExtResource("4_rv4b3")]
 visible = false
 
-[node name="Pivot" type="Marker3D" parent="PlayerBody"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_uqltb")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="PlayerBody/Pivot"]
+[node name="Pivot" type="Marker3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Pivot"]
 mesh = SubResource("CapsuleMesh_pnjfh")

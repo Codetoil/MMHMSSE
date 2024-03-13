@@ -15,7 +15,7 @@ class MainNode: Node {
     override func _ready() {
         xrInterface = XRServer.findInterface(name: "OpenXR");
         if (xrInterface != nil && xrInterface!.isInitialized()) {
-            GD.print("OpenXR initialized successfully");
+            GD.print("OpenXR initialized successfully, loading XR Player");
             
             // Turn off v-sync!
             DisplayServer.windowSetVsyncMode(DisplayServer.VSyncMode.disabled);
@@ -23,9 +23,11 @@ class MainNode: Node {
             getViewport()?.useXr = true;
             
             player = createXrPlayer();
+        } else if (DisplayServer.getName() == "headless") {
+            GD.print("Booting in headless mode, not loading Player")
         } else {
-            GD.print("OpenXR failed to initialized, reverting to backup player node");
-            
+            GD.print("OpenXR failed to initialized or is disabled, loading Window Player");
+
             player = createWindowPlayer();
         }
     }
@@ -35,7 +37,7 @@ class MainNode: Node {
     }
     
     public func createXrPlayer() -> XrPlayer {
-        var playerScene: PackedScene = ResourceLoader.load(path: "res://XrPlayer.tscn") as! PackedScene;
+        var playerScene: PackedScene = ResourceLoader.load(path: "res://objects/XrPlayer.tscn") as! PackedScene;
         var xrPlayer: XrPlayer = playerScene.instantiate() as! XrPlayer;
         xrPlayer.position = Vector3(x: 0, y: 6, z: 0);
         addChild(node: xrPlayer);
@@ -43,7 +45,7 @@ class MainNode: Node {
     }
     
     public func createWindowPlayer() -> WindowPlayer {
-        var playerScene: PackedScene = ResourceLoader.load(path: "res://WindowPlayer.tscn") as! PackedScene;
+        var playerScene: PackedScene = ResourceLoader.load(path: "res://objects/WindowPlayer.tscn") as! PackedScene;
         var windowPlayer: WindowPlayer = playerScene.instantiate() as! WindowPlayer;
         windowPlayer.position = Vector3(x: 0, y: 6, z: 0);
         addChild(node: windowPlayer);

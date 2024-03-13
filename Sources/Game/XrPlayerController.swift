@@ -23,7 +23,8 @@ class XrPlayerController: XrPlayerControllerProtocol {
         var xrCamera: XRCamera3D = xrPlayer.getNode(path: "XROrigin3D/XRCamera3D") as! XRCamera3D;
         
         var xMovement: Float = Float(Input.getJoyAxis(device: 0, axis: JoyAxis.leftX));
-        var yMovement: Float = xrPlayer.isMaterialized() ? 0 : Float(Input.getAxis(negativeAction: "move_down", positiveAction: "move_up"));
+        var yMovement: Float = xrPlayer.isMaterialized() ? 0 : Float(Input.getAxis(negativeAction: "move_down",
+        positiveAction: "move_up"));
         var zMovement: Float = Float(Input.getJoyAxis(device: 0, axis: JoyAxis.leftY));
         var direction: Vector3 = (xrPlayer.transform.basis * Vector3(x: xMovement, y: yMovement, z: zMovement));
         if (direction != .zero)

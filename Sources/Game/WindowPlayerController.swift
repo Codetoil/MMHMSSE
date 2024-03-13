@@ -9,7 +9,7 @@ import SwiftGodot;
 
 class WindowPlayerController: WindowPlayerControllerProtocol {
     private final var speed: Float = 5.0;
-    private final var friction: Double = 5.0;
+    private final var friction: Double = 0.1;
     private final var jumpImpulse: Float = 5.0;
     private final var mouseSensitivity: Double = 0.01;
     private final var rollSensitivity: Double = 0.01;
@@ -23,8 +23,10 @@ class WindowPlayerController: WindowPlayerControllerProtocol {
     func processMovementControls() {
         var cameraPivot: Marker3D = windowPlayer.getNode(path: "CameraPivot") as! Marker3D;
         
-        var inputDir: Vector2 = Input.getVector(negativeX: "move_left", positiveX: "move_right", negativeY: "move_forward", positiveY: "move_back");
-        var yMovement: Float = windowPlayer.isMaterialized() ? 0 : Float(Input.getAxis(negativeAction: "move_down", positiveAction: "move_up"));
+        var inputDir: Vector2 = Input.getVector(negativeX: "move_left", positiveX: "move_right",
+         negativeY: "move_forward", positiveY: "move_back");
+        var yMovement: Float = windowPlayer.isMaterialized() ? 0 :
+        Float(Input.getAxis(negativeAction: "move_down", positiveAction: "move_up"));
         var direction: Vector3 = (windowPlayer.transform.basis * Vector3(x: inputDir.x, y: yMovement, z: inputDir.y));
         if (direction != .zero)
         {
@@ -37,7 +39,7 @@ class WindowPlayerController: WindowPlayerControllerProtocol {
         }
         else
         {
-            windowPlayer.velocity.moveToward(to: Vector3(x: 0, y: yMovement, z: 0), delta: friction);
+            windowPlayer.velocity.moveToward(to: Vector3(x: 0.0, y: yMovement, z: 0.0), delta: friction);
         }
         if (windowPlayer.isMaterialized() && windowPlayer.isOnFloor() && Input.isActionJustPressed(action: "move_up"))
         {
@@ -57,8 +59,9 @@ class WindowPlayerController: WindowPlayerControllerProtocol {
              || (windowPlayer.isMaterialized() && Input.mouseMode == Input.MouseMode.captured))
             && event is InputEventMouseMotion)
         {
-            windowPlayer.rotateY(angle: -(event as! InputEventMouseMotion).relative.x as! Double * mouseSensitivity);
-            (windowPlayer.getNode(path: "CameraPivot") as! Marker3D).rotateX(angle: -(event as! InputEventMouseMotion).relative.y as! Double * mouseSensitivity)
+            windowPlayer.rotateY(angle: -Double((event as! InputEventMouseMotion).relative.x) * mouseSensitivity);
+            (windowPlayer.getNode(path: "CameraPivot") as! Marker3D).rotateX(angle:
+            -Double((event as! InputEventMouseMotion).relative.y) * mouseSensitivity)
         }
         
         if (windowPlayer.isMaterialized())
