@@ -1,4 +1,3 @@
-.godot
 .idea
 .vscode
 .build
@@ -6,11 +5,6 @@
 Godot_v4.2.1-stable_linux.x86_64.zip
 Godot_v4.2.1-stable_linux.x86_64
 Godot_v4.2.1-stable_export_templates.tpz
-Godot/addons/game_swift/debug
-Godot/addons/game_swift/release
-Godot/addons/godotopenxrvendors/khronos/.bin
-Godot/addons/godotopenxrvendors/lynx/.bin
-Godot/addons/godotopenxrvendors/meta/.bin
-Godot/addons/godotopenxrvendors/pico/.bin
+Godot/.godot
+Godot/addons
 Godot/bin
-Godot/templates

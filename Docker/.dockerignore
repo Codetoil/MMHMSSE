@@ -1,0 +1,10 @@
+../.build
+.github
+.vscode
+.idea
+.swiftpm
+Godot
+Sources
+Tests
+Package.resolved
+Package.swift
