@@ -1,9 +1,0 @@
-*
-!build-linux-x86_64.sh
-!copy-swift-binaries-linux-x86_64.sh
-!export-linux-x86_64.sh
-!game-install-linux-x86_64.Dockerfile
-!install-linux-x86_64.sh
-!run-headless-linux-x86_64.sh
-!run-linux-x86_64.sh
-!run-vr-linux-x86_64.sh
