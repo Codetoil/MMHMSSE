@@ -31,6 +31,6 @@ jobs:
       uses: docker/build-push-action@v5
       with:
         context: .
-        file: { context }/game-install-linux-x86_64.Dockerfile
+        file: ${{ context }}/game-install-linux-x86_64.Dockerfile
         push: true
         tags: codetoil/game-devenv-linux-x86_64:latest
