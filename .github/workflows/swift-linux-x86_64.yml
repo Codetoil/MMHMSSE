@@ -15,5 +15,6 @@ jobs:
     runs-on: ubuntu-22.04
 
     steps:
+    - run: cd Docker
     - name: Build the Docker image
-      run: docker build ./Docker --file ./Docker/game-install-linux-x86_64.Dockerfile --tag game-install-linux-x86_64:$(date +%s)
+      run: docker build . --file ./game-install-linux-x86_64.Dockerfile --tag game-install-linux-x86_64:$(date +%s)
