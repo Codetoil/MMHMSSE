@@ -6,5 +6,5 @@
 //
 
 protocol PlayerControllerProtocol {
-    
+    func onEvent(controlEvent: ControlEvent);
 }
