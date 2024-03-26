@@ -15,28 +15,10 @@
 //  You should have received a copy of the GNU Lesser General Public License
 //  along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-protocol PlayerProtocol: MaterializeProtocol {
-    var velocityX: Float { get set };
-    var velocityY: Float { get set };
-    var velocityZ: Float { get set };
+import Foundation
+import RealModule
 
-    func getController() -> PlayerControllerProtocol;
-    func isOnFloor() -> Bool;
-    func moveAndSlide();
-    func fallAcceleration() -> Float;
-    func tick(delta: Double);
-}
-
-extension PlayerProtocol {
-    mutating func tick(delta: Double) {
-        if (isMaterialized() && isOnFloor())
-        {
-            velocityY -= fallAcceleration() * Float(delta);
-        }
-        moveAndSlide();
-    }
-
-    func fallAcceleration() -> Float {
-        return 9.8;
-    }
+protocol HilbertManifoldProtocol<RealType, HilbertSpace> {
+    associatedtype RealType: Real;
+    associatedtype HilbertSpace: HilbertSpaceProtocol<RealType>;
 }
