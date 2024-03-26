@@ -17,7 +17,7 @@
 
 import Foundation
 
-protocol MaterializeProtocol {
+public protocol MaterializeProtocol {
     func materialize();
     func dematerialize();
     func isMaterialized() -> Bool;

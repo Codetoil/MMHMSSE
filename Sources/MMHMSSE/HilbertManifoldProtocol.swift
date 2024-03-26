@@ -18,7 +18,8 @@
 import Foundation
 import RealModule
 
-protocol HilbertManifoldProtocol<RealType, HilbertSpace> {
+public protocol HilbertManifoldProtocol<RealType, HilbertSpace> {
     associatedtype RealType: Real;
+    typealias ScalarType = Scalar<RealType>;
     associatedtype HilbertSpace: HilbertSpaceProtocol<RealType>;
 }

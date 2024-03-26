@@ -21,7 +21,7 @@ import ComplexModule
 
 prefix operator *
 
-enum Scalar<RealType> where RealType: Real {
+public enum Scalar<RealType> where RealType: Real {
     case real(RealType)
     case complex(Complex<RealType>)
     

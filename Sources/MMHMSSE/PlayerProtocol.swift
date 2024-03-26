@@ -15,7 +15,7 @@
 //  You should have received a copy of the GNU Lesser General Public License
 //  along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-protocol PlayerProtocol: MaterializeProtocol {
+public protocol PlayerProtocol: MaterializeProtocol {
     var velocityX: Float { get set };
     var velocityY: Float { get set };
     var velocityZ: Float { get set };
