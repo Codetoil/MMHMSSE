@@ -16,10 +16,43 @@
 //  along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 import Foundation
-import RealModule
 
-public protocol HilbertManifoldProtocol<RealType, HilbertSpace> {
-    associatedtype RealType: Real;
-    typealias ScalarType = Scalar<RealType>;
-    associatedtype HilbertSpace: HilbertSpaceProtocol<RealType>;
+public protocol HilbertManifoldProtocol 
+{
+    associatedtype ScalarType: CStarAlgebra;
+}
+
+public protocol HilbertManifoldChartProtocol<HilbertManifold>
+{
+    associatedtype ScalarType: CStarAlgebra;
+    associatedtype HilbertManifold: HilbertManifoldProtocol;
+    
+    func forward(point: HilbertManifold) -> (any HilbertSpaceProtocol)?;
+    func backwards(point: any HilbertSpaceProtocol) -> HilbertManifold?;
+}
+
+public protocol Bundle<TotalSpace, BaseSpace> 
+{
+    associatedtype ScalarType: CStarAlgebra;
+    associatedtype TotalSpace: HilbertManifoldProtocol;
+    associatedtype BaseSpace: HilbertManifoldProtocol;
+    static func projection(totalPoint: TotalSpace) -> BaseSpace;
+}
+
+public protocol PrincipleBundle<TotalSpace, BaseSpace, GroupType>: Bundle 
+{
+    associatedtype GroupType: Group;
+    static func apply(totalPoint: TotalSpace, groupValue: GroupType) -> TotalSpace;
+}
+
+public protocol SmoothHilbertManifoldProtocol: HilbertManifoldProtocol
+{
+    associatedtype TangentBundleTotalSpace: SmoothHilbertManifoldProtocol;
+    associatedtype TangentBundle: Bundle<TangentBundleTotalSpace, Self>;
+    static func tangentBundle() -> TangentBundle;
+    
+    associatedtype TangentFrameBundleTotalSpace: SmoothHilbertManifoldProtocol;
+    associatedtype LinearOperatorGroup: Group;
+    associatedtype TangentFrameBundle: PrincipleBundle<TangentFrameBundleTotalSpace, Self, LinearOperatorGroup>;
+    static func tangentFrameBundle() -> TangentFrameBundle;
 }

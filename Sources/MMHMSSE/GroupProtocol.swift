@@ -17,9 +17,17 @@
 
 import Foundation
 
-public protocol MaterializeProtocol 
+public protocol Group
 {
-    func materialize();
-    func dematerialize();
-    func isMaterialized() -> Bool;
+    static func *(operand1: Self, operand2: Self) -> Self;
+    static func inv(operand: Self) -> Self;
+    func inv() -> Self;
+}
+
+extension Group
+{
+    func inv() -> Self
+    {
+        return Self.inv(operand: self);
+    }
 }

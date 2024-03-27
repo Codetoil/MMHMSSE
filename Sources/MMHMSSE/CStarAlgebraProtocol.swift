@@ -17,10 +17,10 @@
 
 import Foundation
 
-public protocol HilbertSpaceProtocol
+prefix operator *
+
+public protocol CStarAlgebra 
 {
-    associatedtype ScalarType: CStarAlgebra;
-    associatedtype OperatorType: CStarAlgebra;
     
     static prefix func *(operand: Self) -> Self;
     
@@ -28,44 +28,49 @@ public protocol HilbertSpaceProtocol
     
     static func -(operand1: Self, operand2: Self) -> Self;
     
-    static func *(operand1: ScalarType, operand2: Self) -> Self;
+    static prefix func -(operand: Self) -> Self;
     
-    static func *(operand1: OperatorType, operand2: Self) -> Self;
+    static func *(operand1: Self, operand2: Self) -> Self;
     
-    static func *(operand1: Self, operand2: ScalarType) -> Self;
+    static func /(operand1: Self, operand2: Self) -> Self;
     
-    static func /(operand1: Self, operand2: ScalarType) -> Self;
+    static func inv(operand: Self) -> Self;
     
-    static func innerProduct(operand1: Self, operand2: Self) -> ScalarType;
+    func inv() -> Self;
     
     static func ==(operand1: Self, operand2: Self) -> Bool;
     
     func real() -> Self;
     
     func imaginary() -> Self;
-    
 }
 
+extension CStarAlgebra
+{
+    func inv() -> Self {
+        return Self.inv(operand: self);
+    }
+}
 
-func +=<HilbertSpaceType>(operand1: inout HilbertSpaceType, operand2: HilbertSpaceType) -> HilbertSpaceType where HilbertSpaceType: HilbertSpaceProtocol
+func +=<AlgebraType>(operand1: inout AlgebraType, operand2: AlgebraType) -> AlgebraType where AlgebraType: CStarAlgebra
 {
     operand1 = operand1 + operand2;
     return operand1;
 }
 
-func -=<HilbertSpaceType>(operand1: inout HilbertSpaceType, operand2: HilbertSpaceType) -> HilbertSpaceType where HilbertSpaceType: HilbertSpaceProtocol
+func -=<AlgebraType>(operand1: inout AlgebraType, operand2: AlgebraType) -> AlgebraType where AlgebraType: CStarAlgebra
 {
     operand1 = operand1 - operand2;
     return operand1;
 }
 
-func *=<HilbertSpaceType>(operand1: inout HilbertSpaceType, operand2: HilbertSpaceType.ScalarType) -> HilbertSpaceType where HilbertSpaceType: HilbertSpaceProtocol
+func *=<AlgebraType>(operand1: inout AlgebraType, operand2: AlgebraType) -> AlgebraType where AlgebraType: CStarAlgebra
 {
     operand1 = operand1 * operand2;
     return operand1;
 }
 
-func /=<HilbertSpaceType>(operand1: inout HilbertSpaceType, operand2: HilbertSpaceType.ScalarType) -> HilbertSpaceType where HilbertSpaceType: HilbertSpaceProtocol
+func /=<AlgebraType>(operand1: inout AlgebraType, operand2: AlgebraType) -> AlgebraType where AlgebraType: CStarAlgebra
 {
     operand1 = operand1 / operand2;
     return operand1;
