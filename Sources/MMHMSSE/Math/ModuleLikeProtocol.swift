@@ -21,18 +21,19 @@ public protocol OperatorProtocol: SetProtocol
 {
 }
 
+
 public protocol MultiplicitiveGroupWithOperatorsProtocol<MultiplicitiveOperatorType>: MultiplicitiveGroupProtocol
 {
     associatedtype MultiplicitiveOperatorType: OperatorProtocol;
     static func multiplicitiveGroupActor(_operator: MultiplicitiveOperatorType) -> (Self) -> Self;
-    static func *(_operator: MultiplicitiveOperatorType, operand: Self) -> Self;
+    static func ^(operand: Self, _operator: MultiplicitiveOperatorType) -> Self;
 }
 
 extension MultiplicitiveGroupWithOperatorsProtocol {
     static func multiplicitiveGroupActor(_operator: MultiplicitiveOperatorType) -> (Self) -> Self
     {
         return {(operand: Self) -> Self in
-            return _operator * operand;
+            return operand ^ _operator;
         };
     }
 }
@@ -41,22 +42,100 @@ extension MultiplicitiveGroupWithOperatorsProtocol {
 public protocol AdditiveGroupWithOperatorsProtocol<AdditiveOperatorType>: AdditiveGroupProtocol
 {
     associatedtype AdditiveOperatorType: OperatorProtocol;
-    static func additiveGroupActor(operator: AdditiveOperatorType) -> (Self) -> Self;
-    static func +(operand: AdditiveOperatorType, operand: Self) -> Self;
+    static func additiveGroupActor(_operator: AdditiveOperatorType) -> (Self) -> Self;
+    static func *(_operand: AdditiveOperatorType, operand: Self) -> Self;
 }
 
 extension AdditiveGroupWithOperatorsProtocol {
     static func additiveGroupActor(_operator: AdditiveOperatorType) -> (Self) -> Self
     {
         return {(operand: Self) -> Self in
-            return _operator + operand;
+            return _operator * operand;
         };
     }
 }
 
 
-public protocol NearringModuleProtocol<NearRingType>: AdditiveGroupWithOperatorsProtocol
+public protocol LeftNearRingModuleProtocol<LeftNearRingType>: AdditiveGroupWithOperatorsProtocol
 {
-    associatedtype NearRingType: NearRingProtocol, OperatorProtocol;
-    associatedtype AdditiveOperatorType = NearRingType;
+    associatedtype LeftNearRingType: NearRingProtocol, OperatorProtocol;
+    associatedtype AdditiveOperatorType = LeftNearRingType;
+}
+
+public protocol LeftModuleOverSemiringProtocol<LeftSemiringType>: AdditiveCommutativeMonoidProtocol
+{
+    associatedtype LeftSemiringType: SemiringProtocol, OperatorProtocol;
+    static func additiveGroupActor(_operator: LeftSemiringType) -> (Self) -> Self;
+    static func *(_operator: LeftSemiringType, operand: Self) -> Self;
+}
+
+extension LeftModuleOverSemiringProtocol {
+    static func additiveGroupActor(_operator: LeftSemiringType) -> (Self) -> Self
+    {
+        return {(operand: Self) -> Self in
+            return _operator * operand;
+        };
+    }
+}
+
+public protocol LeftModuleProtocol<LeftRingType>: LeftNearRingModuleProtocol, LeftModuleOverSemiringProtocol, AdditiveAbelianGroupProtocol
+{
+    associatedtype LeftRingType: RingProtocol, OperatorProtocol;
+    associatedtype LeftNearRingType = LeftRingType;
+}
+
+
+public protocol RightNearRingModuleProtocol<RightNearRingType>: AdditiveGroupWithOperatorsProtocol
+{
+    associatedtype RightNearRingType: NearRingProtocol, OperatorProtocol;
+    static func additiveGroupActor(_operator: RightNearRingType) -> (Self) -> Self;
+    static func *(operand: Self, _operator: RightNearRingType) -> Self;
+}
+
+extension RightNearRingModuleProtocol {
+    static func additiveGroupActor(_operator: RightNearRingType) -> (Self) -> Self
+    {
+        return {(operand: Self) -> Self in
+            return operand * _operator;
+        };
+    }
+}
+
+public protocol RightModuleOverSemiringProtocol<RightSemiringType>: AdditiveCommutativeMonoidProtocol
+{
+    associatedtype RightSemiringType: SemiringProtocol, OperatorProtocol;
+    static func additiveGroupActor(_operator: RightSemiringType) -> (Self) -> Self;
+    static func *(operand: Self, _operator: RightSemiringType) -> Self;
+}
+
+extension RightModuleOverSemiringProtocol {
+    static func additiveGroupActor(_operator: RightSemiringType) -> (Self) -> Self
+    {
+        return {(operand: Self) -> Self in
+            return operand * _operator;
+        };
+    }
+}
+
+public protocol RightModuleProtocol<RightRingType>: RightNearRingModuleProtocol, RightModuleOverSemiringProtocol, AdditiveAbelianGroupProtocol
+{
+    associatedtype RightRingType: RingProtocol, OperatorProtocol;
+    associatedtype RightNearRingType = RightRingType;
+}
+
+public protocol BiModuleProtocol<LeftRingType, RightRingType>: LeftModuleProtocol, RightModuleProtocol
+{
+}
+
+public protocol ModuleProtocol<RingType>: BiModuleProtocol
+{
+    associatedtype RingType: RingProtocol, OperatorProtocol;
+    associatedtype LeftRingType = RingType;
+    associatedtype RightRingType = RingType;
+}
+
+public protocol VectorSpaceProtocol<FieldType>: ModuleProtocol
+{
+    associatedtype FieldType: FieldProtocol, OperatorProtocol;
+    associatedtype RingType = FieldType;
 }
