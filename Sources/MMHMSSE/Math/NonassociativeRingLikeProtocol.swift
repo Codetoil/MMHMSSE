@@ -17,17 +17,9 @@
 
 import Foundation
 
-public protocol Group
+infix operator *: NonAssociativeMultiplicationPrecedence
+
+public protocol NonassociativeProperSemifieldProtocol: AdditiveSemigroupProtocol, MultiplicitiveLoopProtocol
 {
     static func *(operand1: Self, operand2: Self) -> Self;
-    static func inv(operand: Self) -> Self;
-    func inv() -> Self;
-}
-
-extension Group
-{
-    func inv() -> Self
-    {
-        return Self.inv(operand: self);
-    }
 }

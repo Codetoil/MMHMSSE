@@ -19,12 +19,12 @@ import Foundation
 
 public protocol HilbertManifoldProtocol 
 {
-    associatedtype ScalarType: CStarAlgebra;
+    associatedtype ScalarType: CStarAlgebraProtocol;
 }
 
 public protocol HilbertManifoldChartProtocol<HilbertManifold>
 {
-    associatedtype ScalarType: CStarAlgebra;
+    associatedtype ScalarType: CStarAlgebraProtocol;
     associatedtype HilbertManifold: HilbertManifoldProtocol;
     
     func forward(point: HilbertManifold) -> (any HilbertSpaceProtocol)?;
@@ -33,7 +33,7 @@ public protocol HilbertManifoldChartProtocol<HilbertManifold>
 
 public protocol Bundle<TotalSpace, BaseSpace> 
 {
-    associatedtype ScalarType: CStarAlgebra;
+    associatedtype ScalarType: CStarAlgebraProtocol;
     associatedtype TotalSpace: HilbertManifoldProtocol;
     associatedtype BaseSpace: HilbertManifoldProtocol;
     static func projection(totalPoint: TotalSpace) -> BaseSpace;
@@ -41,7 +41,7 @@ public protocol Bundle<TotalSpace, BaseSpace>
 
 public protocol PrincipleBundle<TotalSpace, BaseSpace, GroupType>: Bundle 
 {
-    associatedtype GroupType: Group;
+    associatedtype GroupType: GroupProtocol;
     static func apply(totalPoint: TotalSpace, groupValue: GroupType) -> TotalSpace;
 }
 
@@ -52,7 +52,7 @@ public protocol SmoothHilbertManifoldProtocol: HilbertManifoldProtocol
     static func tangentBundle() -> TangentBundle;
     
     associatedtype TangentFrameBundleTotalSpace: SmoothHilbertManifoldProtocol;
-    associatedtype LinearOperatorGroup: Group;
+    associatedtype LinearOperatorGroup: GroupProtocol;
     associatedtype TangentFrameBundle: PrincipleBundle<TangentFrameBundleTotalSpace, Self, LinearOperatorGroup>;
     static func tangentFrameBundle() -> TangentFrameBundle;
 }
