@@ -183,7 +183,7 @@ public class UnionSet<Set1Type: SetProtocol, Set2Type: SetProtocol>: SetProtocol
     
     public static func ∈(element: any SetElementProtocol, unionSet: UnionSet<Set1Type, Set2Type>) -> Bool
     {
-        return element ∈ unionSet.set1 && element ∈ unionSet.set2;
+        return element ∈ unionSet.set1 || element ∈ unionSet.set2;
     }
 }
 
@@ -199,7 +199,7 @@ public class IntersectionSet<Set1Type: SetProtocol, Set2Type: SetProtocol>: SetP
     
     public static func ∈(element: any SetElementProtocol, intersectionSet: IntersectionSet<Set1Type, Set2Type>) -> Bool
     {
-        return element ∈ intersectionSet.set1 || element ∈ intersectionSet.set2;
+        return element ∈ intersectionSet.set1 && element ∈ intersectionSet.set2;
     }
 }
 
