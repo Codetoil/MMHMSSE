@@ -1,4 +1,4 @@
-//  MMHMSSE is a multiplayer-enabled game and physics engine library for curved spaces.
+//  SwiftAlgebraLib is a library adding abstract algebra to swift.
 //
 //  Copyright (C) 2024 Anthony Michalek
 //
@@ -15,9 +15,22 @@
 //  You should have received a copy of the GNU General Public License
 //  along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-import Foundation
+import XCTest
+@testable import SwiftAlgebraLib
 
-public protocol ControlEventProtocol
+class TestSetElement: SetElementProtocol
 {
+    public static func ==(operand1: TestSetElement, operand2: any SetElementProtocol) -> Bool
+    {
+        
+    }
+    public static func ==(operand1: any SetElementProtocol, operand2: TestSetElement) -> Bool
+    {
+        
+    }
+}
 
+class TestSet: SetProtocol
+{
+    
 }

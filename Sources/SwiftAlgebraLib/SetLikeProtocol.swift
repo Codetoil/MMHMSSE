@@ -1,9 +1,19 @@
+//  SwiftAlgebraLib is a library adding abstract algebra to swift.
 //
-//  File.swift
-//  
+//  Copyright (C) 2024 Anthony Michalek
 //
-//  Created by Anthony Michalek on 4/1/24.
+//  This program is free software: you can redistribute it and/or modify
+//  it under the terms of the GNU General Public License as published by
+//  the Free Software Foundation, either version 3 of the License, or
+//  (at your option) any later version.
 //
+//  This program is distributed in the hope that it will be useful,
+//  but WITHOUT ANY WARRANTY; without even the implied warranty of
+//  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+//  GNU General Public License for more details.
+
+//  You should have received a copy of the GNU General Public License
+//  along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 import Foundation
 
@@ -34,29 +44,6 @@ public protocol SetProtocol: SetElementProtocol
     static func ⊆(subset: any SetProtocol, set: Self) -> Bool;
     static func ⊇(superset: any SetProtocol, set: Self) -> Bool;
     static postfix func ∁(operand: Self) -> any SetProtocol;
-}
-
-extension SetProtocol {
-    public static func ∪<SetType: SetProtocol>(operand1: Self, operand2: SetType) -> any SetProtocol
-    {
-        return UnionSet<Self, SetType>(set1: operand1, set2: operand2);
-    }
-    public static func ∪<SetType: SetProtocol>(operand1: SetType, operand2: Self) -> any SetProtocol
-    {
-        return UnionSet<SetType, Self>(set1: operand1, set2: operand2);
-    }
-    public static func ∩<SetType: SetProtocol>(operand1: Self, operand2: SetType) -> any SetProtocol
-    {
-        return IntersectionSet<Self, SetType>(set1: operand1, set2: operand2);
-    }
-    public static func ∩<SetType: SetProtocol>(operand1: SetType, operand2: Self) -> any SetProtocol
-    {
-        return IntersectionSet<SetType, Self>(set1: operand1, set2: operand2);
-    }
-    public static postfix func ∁(operand: Self) -> any SetProtocol
-    {
-        return ComplementSet<Self>(set: operand);
-    }
 }
 
 public class EmptySet: SetProtocol
@@ -168,82 +155,6 @@ public class UniverseSet: SetProtocol
     public static postfix func ∁(operand: UniverseSet) -> any SetProtocol
     {
         return EmptySet.instance;
-    }
-}
-
-public class UnionSet<Set1Type: SetProtocol, Set2Type: SetProtocol>: SetProtocol
-{
-    public final var set1: Set1Type;
-    public final var set2: Set2Type;
-    
-    public init(set1: Set1Type, set2: Set2Type) {
-        self.set1 = set1;
-        self.set2 = set2;
-    }
-    
-    public static func ∈(element: any SetElementProtocol, unionSet: UnionSet<Set1Type, Set2Type>) -> Bool
-    {
-        return element ∈ unionSet.set1 || element ∈ unionSet.set2;
-    }
-}
-
-public class IntersectionSet<Set1Type: SetProtocol, Set2Type: SetProtocol>: SetProtocol
-{
-    public final var set1: Set1Type;
-    public final var set2: Set2Type;
-    
-    public init(set1: Set1Type, set2: Set2Type) {
-        self.set1 = set1;
-        self.set2 = set2;
-    }
-    
-    public static func ∈(element: any SetElementProtocol, intersectionSet: IntersectionSet<Set1Type, Set2Type>) -> Bool
-    {
-        return element ∈ intersectionSet.set1 && element ∈ intersectionSet.set2;
-    }
-}
-
-public class ComplementSet<SetType: SetProtocol>: SetProtocol
-{
-    public final var set: SetType;
-    
-    public init(set: SetType) {
-        self.set = set;
-    }
-    
-    public static func ∈(element: any SetElementProtocol, complementSet: ComplementSet<SetType>) -> Bool
-    {
-        return !(element ∈ complementSet.set);
-    }
-    
-    public static func ==(complementSet: ComplementSet<SetType>, operand: any SetElementProtocol) -> Bool
-    {
-        return (operand is ComplementSet<SetType>) && ((complementSet.set) == ((operand as? ComplementSet<SetType>)!.set));
-    }
-    
-    public static func ==(operand: any SetElementProtocol, complementSet: ComplementSet<SetType>) -> Bool
-    {
-        return (operand is ComplementSet<SetType>) && ((operand as? ComplementSet<SetType>)!.set == (complementSet.set));
-    }
-    
-    public static postfix func ∁(operand: ComplementSet<SetType>) -> any SetProtocol
-    {
-        return operand.set;
-    }
-}
-
-public class PowerSet<SetType: SetProtocol>: SetProtocol
-{
-    public final var set: SetType;
-    
-    public init(set: SetType) {
-        self.set = set
-    }
-    
-    public static func ∈(element: any SetElementProtocol, powerSet: PowerSet<SetType>) -> Bool
-    {
-        let element: (any SetProtocol)? = element as? any SetProtocol;
-        return element != nil && element! ⊆ powerSet.set;
     }
 }
 

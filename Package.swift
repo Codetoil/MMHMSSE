@@ -17,7 +17,9 @@ let package = Package(
     products: [
         // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(name: "MMHMSSE",
-                 targets: ["MMHMSSE"])
+                 targets: ["MMHMSSE"]),
+        .library(name: "SwiftAlgebraLib",
+                 targets: ["SwiftAlgebraLib"])
     ],
     dependencies: [],
     targets: [
@@ -25,7 +27,13 @@ let package = Package(
         // Targets can depend on other targets in this package and products from dependencies
         .target(
             name: "MMHMSSE",
+            dependencies: ["SwiftAlgebraLib"]),
+        .target(
+            name: "SwiftAlgebraLib",
             dependencies: []),
+        .testTarget(
+            name: "SwiftAlgebraLibTests",
+            dependencies: ["SwiftAlgebraLib"]),
         .testTarget(
             name: "MMHMSSETests",
             dependencies: ["MMHMSSE"])
