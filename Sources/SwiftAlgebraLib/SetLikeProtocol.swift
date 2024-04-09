@@ -23,9 +23,9 @@ public protocol SetElementProtocol
     static func ==(operand1: any SetElementProtocol, operand2: Self) -> Bool;
 }
 
+infix operator ∈: CastingPrecedence
 infix operator ∪: LogicalDisjunctionPrecedence
 infix operator ∩: LogicalConjunctionPrecedence
-infix operator ∈: CastingPrecedence
 infix operator ⊂: ComparisonPrecedence
 infix operator ⊃: ComparisonPrecedence
 infix operator ⊆: ComparisonPrecedence
