@@ -1,0 +1,14 @@
+{
+  "originHash" : "f512107c6b1c2c69c20888576c304c9fe3b247bea0ab31aef930bfdfa3902338",
+  "pins" : [
+    {
+      "identity" : "swiftalgebralib",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Codetoil/SwiftAlgebraLib",
+      "state" : {
+        "revision" : "e7dc54affdd9dac26109db3e2d1dcf5fdf677651"
+      }
+    }
+  ],
+  "version" : 3
+}

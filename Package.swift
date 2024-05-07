@@ -17,22 +17,16 @@ let package = Package(
     products: [
         // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(name: "MMHMSSE",
-                 targets: ["MMHMSSE"]),
-        .library(name: "SwiftAlgebraLib",
-                 targets: ["SwiftAlgebraLib"])
+                 targets: ["MMHMSSE"])
     ],
-    dependencies: [],
+    dependencies: [
+        .package(url: "https://github.com/Codetoil/SwiftAlgebraLib", revision: "e7dc54affdd9dac26109db3e2d1dcf5fdf677651")
+    ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
         // Targets can depend on other targets in this package and products from dependencies
         .target(
             name: "MMHMSSE",
-            dependencies: ["SwiftAlgebraLib"]),
-        .target(
-            name: "SwiftAlgebraLib",
-            dependencies: []),
-        .testTarget(
-            name: "SwiftAlgebraLibTests",
             dependencies: ["SwiftAlgebraLib"]),
         .testTarget(
             name: "MMHMSSETests",
